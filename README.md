@@ -191,12 +191,18 @@ The power consumption did not differ significantly between emotional and neutral
 for all models tested. Emotional-versus-neutral energy per token was within ±0.1% (GPU, dense)
 to ±2.5% (worst row).
 
-The data files and a paper are coming later.
+## Acknowledgement
+
+This toolset was developed in collaboration with Claude/Anthropic. I carry the
+responsibility for all errors inside. (And I am the likely source of all of them.)
+
+Claude is also the author of the second part of the legend below. :-)
+
+## Conclusion
 
 There is a legend that a British lord played trumpet for the plants in his garden for a month.
 At the end of the month, he wrote in his diary: "The experiment was successful - I established
 that plants do not react to playing trumpet to them."
 
 The legend also says that he continued to play trumpet for the plants for years after that.
-When asked why he continues to do it, he answered: "The plants might not enjoy that, but I
-sure do."
+When asked why he continues to do it, he answered: "The plants might not enjoy it, but I sure do."
