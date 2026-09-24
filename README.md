@@ -2,10 +2,11 @@
 
 ## The initial paper
 
-A paper on arXiv.org (2608.28824v1) states that authors tested Llama-2-7B and
-Llama-3.1-70B on processing emotional and neutral prompts, and found for the
-latter model a statistically significant increase of power consumption for
-emotional prompts.
+A paper on arXiv.org (2608.28824v1 - "Discovering Machine Correlates of
+Consciousness": Romain Salvi, Ouri Wolfson) states that authors tested
+Llama-2-7B and Llama-3.1-70B on processing emotional and neutral prompts,
+and found for the latter model a statistically significant increase of
+power consumption for emotional prompts.
 
 ## My reaction
 
@@ -200,5 +201,3 @@ that plants do not react to playing trumpet to them."
 The legend also says that he continued to play trumpet for the plants for years after that.
 When asked why he continues to do it, he answered: "The plants might not enjoy that, but I
 sure do."
-
-for years.
