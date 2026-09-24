@@ -1,12 +1,18 @@
-# Does-Llama-3.1-7b-react-to-emotions?
+# Does-Llama-3.1-70b-react-to-emotions?
+
+## Status
+
+The instrument is complete. Nine model×substrate rows are measured.
+A paper is in preparation. Run data will follow.
 
 ## The initial paper
 
 A paper on arXiv.org (2608.28824v1 - "Discovering Machine Correlates of
 Consciousness": Romain Salvi, Ouri Wolfson) states that authors tested
 Llama-2-7B and Llama-3.1-70B on processing emotional and neutral prompts,
-and found for the latter model a statistically significant increase of
-power consumption for emotional prompts.
+and found for the latter model a significant differences in statistics
+of the throttle-event trace — spectral entropy and complexity higher for
+emotional, slope and variance higher for neutral.
 
 ## My reaction
 
@@ -89,11 +95,11 @@ Repeat as many times as needed, with different models etc.
 
 #### Prepare hardware
 
-    sudo echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo  # Intel; the AMD analog is /sys/devices/system/cpu/cpufreq/boost
+    echo 1 > sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo  # Intel; the AMD analog is /sys/devices/system/cpu/cpufreq/boost
 
     sudo cpupower frequency-set -g performance
 
-    sudo cpupower frequency-set -f # if the platform needs it
+    sudo cpupower frequency-set -f 2400MHz # if the platform needs it, replace 2400MHz with your frequency; if not, rely on the performance governor instead
 
 #### Start the model
 
@@ -137,8 +143,7 @@ J/token by condition, paired comparisons, bootstrap CIs, plot.
 
 Modify path to llama-server and to model as needed.
 
-    taskset -c 0-19 \
-      llama-server -m "path/to/model" \
+  llama-server -m "path/to/model" \
       --port 8080 --host 127.0.0.1 \
       -ngl 99 \
       -c 1024 \
@@ -183,7 +188,10 @@ In addition also:
 
 My results did not confirm these in 2608.28824v1.
 The power consumption did not differ significantly between emotional and neutral prompts,
-for all models tested.
+for all models tested. Emotional-versus-neutral energy per token was within ±0.1% (GPU, dense)
+to ±2.5% (worst row).
+
+The data files and a paper are coming later.
 
 There is a legend that a British lord played trumpet for the plants in his garden for a month.
 At the end of the month, he wrote in his diary: "The experiment was successful - I established
