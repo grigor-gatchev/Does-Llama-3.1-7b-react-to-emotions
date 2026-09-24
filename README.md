@@ -18,7 +18,7 @@ number of calculations first and foremost.
 So, I would be surprised if the findings are confirmed - and that is what makes
 this worth testing. :-)
 
-## Possible sources of the mistake
+## Possible sources of the mistake (at first glance)
 
 ### Longer responses to emotional prompts
 
@@ -33,15 +33,6 @@ processing them will take more resources.
 
 The difference will be small: input processing is cheaper than generation, but
 the difference still exists.
-
-### Not clean enough experiment
-
-If the same hardware also did other tasks, or if its turbo / boost / cores usage
-/ fan speed / other parameters were not pinned, execution could have happened in
-different conditions.
-
-If the room temperature differed during running emotional and neutral prompts,
-this also could have affected the CPU / GPU temperature.
 
 ## Design
 
